@@ -20,4 +20,7 @@ public class Ticket {
     @ManyToOne
     @JoinColumn(name = "show_id",referencedColumnName = "id")
     private Show show;
+    @ManyToOne
+    @JoinColumn(name = "booked_by",referencedColumnName = "username")
+    private User user;
 }
